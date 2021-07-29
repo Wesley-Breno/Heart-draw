@@ -1,2 +1,2 @@
 # Heart-draw <3
-Fiz o python desenhar um coração.
+Fiz uma função que faz desenhar de pouco em pouco um coração na linguagem python.

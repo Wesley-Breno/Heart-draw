@@ -1,2 +1,2 @@
 # Heart-draw <3
-Fiz uma função que faz desenhar de pouco em pouco um coração na linguagem python.
+Codigo feito em Python junto com a biblioteca turtle, com a funcionalidade de desenhar um coração.

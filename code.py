@@ -1,173 +1,29 @@
-from time import sleep
+import turtle  # Biblioteca que sera responsavel por fazer o desenho do coracao
 
-print('\033[1;31m')
+while True:  # Fazendo um loop infinito para o programa continuar desenhando o coracao infinitamente
+    
+    # Configurando a tela
+    tela = turtle.Screen()
+    tela.bgcolor('black')
+    tela.setup(width=600, height=400)
+    tela.delay(1)
+    
+    # Configurando a caneta
+    tartaruga = turtle.Turtle()
+    tartaruga.color('red')
+    tartaruga.pensize(5)
 
+    # Comando numericos que serao usados para fazer a caneta girar para a direita e seguir em frente
+    comandos = [50, 100, 50, 50, 80, 50, 50, 21,
+                270, 25, 400, 35, 60, 50, 70, 125]
 
-def heart():
-    print()
-    print()
-    print()
+    for c in range(len(comandos)):  # Desenhando coracao
+        if c == 0:  # Se for o primeiro comando
+            tartaruga.left(comandos[c])
+        else:
+            if c % 2 == 0:  # Se for para virar a direcao da caneta
+                tartaruga.left(comandos[c])
+            else:  # Se for para seguir em frente
+                tartaruga.forward(comandos[c])
 
-    # primeira linha
-    for c in range(0, 25):
-        print(" ", end='')
-    for c in range(0, 3):
-        print("--", end='')
-        sleep(0.5)
-    for c in range(0, 5):
-        print(' ', end='')
-    for c in range(0, 3):
-        print("--", end='')
-        sleep(0.5)
-    print()
-
-    # segunda linha
-    for c in range(0, 24):
-        print(' ', end='')
-    print('/', end='')
-    sleep(0.5)
-    for c in range(0, 7):
-        print(' ', end='')
-    print('|', end='')
-    sleep(0.5)
-    for c in range(0, 2):
-        print(' ', end='')
-    print('|', end='')
-    sleep(0.5)
-    for c in range(0, 6):
-        print(' ', end='')
-    print('\\', end='')
-    sleep(0.5)
-    print()
-
-    # terceira linha
-    for c in range(0, 23):
-        print(' ', end='')
-    print('/', end='')
-    sleep(0.5)
-    for c in range(0, 9):
-        print(' ', end='')
-    print('||', end='')
-    sleep(0.5)
-    for c in range(0, 8):
-        print(' ', end='')
-    print('\\', end='')
-    sleep(0.5)
-    print()
-
-    # quarta linha
-    for c in range(0, 22):
-        print(' ', end='')
-    print('|', end='')
-    sleep(0.5)
-    for c in range(0, 21):
-        print(' ', end='')
-    print("|", end='')
-    sleep(0.5)
-    print()
-
-    # quinta linha
-    for c in range(0, 22):
-        print(' ', end='')
-    print('|', end='')
-    sleep(0.5)
-    for c in range(0, 21):
-        print(' ', end='')
-    print("|", end='')
-    sleep(0.5)
-    print()
-
-    # sexta linha
-    for c in range(0, 22):
-        print(' ', end='')
-    print('|', end='')
-    sleep(0.5)
-    for c in range(0, 21):
-        print(' ', end='')
-    print("|", end='')
-    sleep(0.5)
-    print()
-
-    # setima linha
-    for c in range(0, 23):
-        print(' ', end='')
-    print('\\', end='')
-    sleep(0.5)
-    for c in range(0, 19):
-        print(' ', end='')
-    print('/')
-    sleep(0.5)
-
-    # oitava linha
-    for c in range(0, 24):
-        print(' ', end='')
-    print('\\', end='')
-    sleep(0.5)
-    for c in range(0, 17):
-        print(' ', end='')
-    print('/')
-    sleep(0.5)
-
-    # nona linha
-    for c in range(0, 25):
-        print(' ', end='')
-    print('\\', end='')
-    sleep(0.5)
-    for c in range(0, 15):
-        print(' ', end='')
-    print('/')
-    sleep(0.5)
-
-    # decima linha
-    for c in range(0, 26):
-        print(' ', end='')
-    print('\\', end='')
-    sleep(0.5)
-    for c in range(0, 13):
-        print(' ', end='')
-    print('/')
-    sleep(0.5)
-
-    # decima primeira linha
-    for c in range(0, 27):
-        print(' ', end='')
-    print('\\', end='')
-    sleep(0.5)
-    for c in range(0, 11):
-        print(' ', end='')
-    print('/')
-    sleep(0.5)
-
-    # decima segunda linha
-    for c in range(0, 29):
-        print(' ', end='')
-    print('\\', end='')
-    sleep(0.5)
-    for c in range(0, 7):
-        print(' ', end='')
-    print('/')
-    sleep(0.5)
-
-    # decima terceira linha
-    for c in range(0, 31):
-        print(' ', end='')
-    print('\\', end='')
-    sleep(0.5)
-    for c in range(0, 3):
-        print(' ', end='')
-    print('/')
-    sleep(0.5)
-
-    # ultima linha
-    for c in range(0, 32):
-        print(' ', end='')
-    print('\\', end='')
-    sleep(0.5)
-    for c in range(0, 1):
-        print(' ', end='')
-    print('/')
-    sleep(0.5)
-
-
-heart()
-print('\033[m')
+    tela.clear()  # Limpando tela
